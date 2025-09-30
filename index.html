@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <base target="_blank">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linktree Logbook</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Inter', sans-serif;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 540px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 16px auto;
+      border: 2px solid #dee2e6;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+      color: #222;
+    }
+
+    .accordion-button {
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      background-color: #f1f3f5;
+      color: #212529;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #e9ecef;
+    }
+
+    .accordion-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .accordion-body {
+      padding: 16px;
+      background-color: #fcfcfd;
+    }
+
+    /* Link Box */
+    .link-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      margin: 6px 0;
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #212529;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    .link-box:hover {
+      background-color: #f8f9fa;
+      transform: translateY(-2px);
+    }
+
+    .link-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f3f5;
+      border-radius: 6px;
+      font-size: 18px;
+    }
+
+    .divider {
+      border-bottom: 1px solid #dee2e6;
+      margin: 16px 0;
+    }
+
+    .sub-accordion .accordion-button {
+      background-color: #fafbfc;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 28px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Foto profil 
+    <img src="https://drive.google.com/uc?export=view&id=1BiIi0dmOlp4Mgtbc6o4VO6vp_MWnSZCy" 
+     alt="Foto Profil" class="profile-pic" /> -->
+
+    <!-- Judul -->
+    <h3>Daftar Link Pengisian Logbook</h3>
+
+    <!-- Accordion -->
+    <div class="accordion" id="mainAccordion">
+
+      <!-- Medis -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingMedis">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMedis">
+              📋 Logbook Medis
+          </button>
+        </h2>
+        <div id="collapseMedis" class="accordion-collapse collapse" data-bs-parent="#mainAccordion">
+          <div class="accordion-body">
+
+            <div class="accordion sub-accordion" id="medisSubAccordion">
+              <!-- PT -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePT">
+                      📋 Pekerjaan Tertentu
+                  </button>
+                </h2>
+                <div id="collapsePT" class="accordion-collapse collapse" data-bs-parent="#medisSubAccordion">
+                  <div class="accordion-body">
+                    <div class="nested-links">
+                      <a href="#" class="link-box">
+                        <span class="link-icon">🗓️</span>
+                        <span>Agustus 2025 [Link - On Progress]</span>
+                      </a>
+                      <a href="#" class="link-box">
+                        <span class="link-icon">🗓️</span>
+                        <span>September 2025 [Link - On Progress]</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <!-- Non PT -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNonPT">
+                      📋 Bukan Pekerjaan Tertentu
+                  </button>
+                </h2>
+                <div id="collapseNonPT" class="accordion-collapse collapse" data-bs-parent="#medisSubAccordion">
+                  <div class="accordion-body">
+                    <div class="nested-links">
+                      <a href="https://drive.google.com/drive/folders/1miKhVT0s-7UKZYQbINy94PpJ5UB4glvz?usp=drive_link" class="link-box">
+                        <span class="link-icon">🗓️</span>
+                        <span>Agustus 2025</span>
+                      </a>
+                      <a href="https://drive.google.com/drive/folders/13yGROiyp0U6Jh7CDgj4xpFCHZs-StjA7?usp=drive_link" class="link-box">
+                        <span class="link-icon">🗓️</span>
+                        <span>September 2025</span>
+                      </a>
+                      <a href="https://drive.google.com/drive/folders/1duaSmiGmdRjsFig1qiQsNjvUVBPahGzF?usp=drive_link" class="link-box">
+                        <span class="link-icon">🗓️</span>
+                        <span>Oktober 2025</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Perawat -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerawat">
+             📋 Logbook Perawat/Bidan
+          </button>
+        </h2>
+        <div id="collapsePerawat" class="accordion-collapse collapse" data-bs-parent="#mainAccordion">
+          <div class="accordion-body">
+            <div class="nested-links">
+              <a href="https://drive.google.com/drive/folders/1tzr5gSKj8gF5lR5A_ha1MTk4cE2-vt7H?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Agustus 2025</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1xlaarvr2m9WQknhrgDDwnZUUyOcK0hxk?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>September 2025</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1fgCDsvYxq0_gVbmtt-U-Y3e5sh7HVVhf?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Oktober 2025</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nakes Lain -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNakes">
+             📋 Logbook Nakes Lainnya
+          </button>
+        </h2>
+        <div id="collapseNakes" class="accordion-collapse collapse" data-bs-parent="#mainAccordion">
+          <div class="accordion-body">
+            <div class="nested-links">
+              <a href="https://drive.google.com/drive/folders/1HyvT_agCb7m-V81yZxkZ9JLUMQlmRGh5?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Agustus 2025</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/11usT_CBS0vdU1VRcSiBBfr2S6ACIf_d_?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>September 2025</span>
+              </a>
+              <a href="https://drive.google.com/drive/folders/1CgnAp1JL0xZ-d8gcn7iEHe3bqiMpx3xT?usp=drive_link" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Oktober 2025</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manajemen -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseManajemen">
+             📋 Logbook Manajemen
+          </button>
+        </h2>
+        <div id="collapseManajemen" class="accordion-collapse collapse" data-bs-parent="#mainAccordion">
+          <div class="accordion-body">
+            <div class="nested-links">
+              <a href="#" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Agustus 2025</span>
+              </a>
+              <a href="#" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>September 2025</span>
+              </a>
+              <a href="#" class="link-box">
+                <span class="link-icon">🗓️</span>
+                <span>Oktober 2025</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link Tambahan -->
+    <div class="additional-links">
+      <a href="https://drive.google.com/file/d/1dNa-16YKrtMN3dc754K4G01-Cd2N_M26/view" class="link-box">
+        <span class="link-icon">📝</span>
+        <span>Alur Pengajuan Saran, Permohonan Penjelasan & Informasi Tertentu</span>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSevT54gjMz3ioC1e3mEeS9EPzUocOcsq4XpCsozYNnH4nGuSg/viewform" class="link-box">
+        <span class="link-icon">📤</span>
+        <span>Link Pengajuan Saran, Permohonan Penjelasan & Informasi Tertentu</span>
+      </a>
+      <a href="https://docs.google.com/spreadsheets/d/1y7DDtPqCCW712d_-DxoLDbwORHntI24H1m9SYRWuUws/edit" class="link-box">
+        <span class="link-icon">📆</span>
+        <span>Jadwal Tatap Muka</span>
+      </a>
+      <a href="https://drive.google.com/drive/folders/120PxUI0YxZWghdTBtP2GZaMuIHmsmZoD?usp=sharing" class="link-box">
+        <span class="link-icon">▶️</span>
+        <span>Video Tutorial</span>
+      </a>
+      <a href="https://drive.google.com/drive/folders/120PxUI0YxZWghdTBtP2GZaMuIHmsmZoD?usp=sharing" class="link-box">
+        <span class="link-icon">▶️</span>
+        <span>Video Tutorial</span>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>Tim Pengelola Jasa Pelayanan</footer>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
